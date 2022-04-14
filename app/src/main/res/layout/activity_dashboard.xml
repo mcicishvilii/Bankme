@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -74,5 +76,158 @@
         android:layout_marginTop="9dp"
         app:layout_constraintHorizontal_chainStyle="spread"
         android:contentDescription="@string/mobile_data_indicator" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/statusbar"
+        android:layout_marginStart="16dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/TW_greetings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-black"
+                app:layout_constraintTop_toTopOf="@id/constraintLayout"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:id="@+id/TW_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tip_text"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintTop_toTopOf="@id/TW_greetings"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_moneybag"
+                app:layout_constraintStart_toEndOf="@+id/TW_tip"
+                app:layout_constraintTop_toTopOf="@id/constraintLayout"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="5dp"/>
+
+
+            <View
+                android:id="@+id/savings_background"
+                android:layout_width="370dp"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toBottomOf="@id/TW_tip"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/savings_background"
+                />
+
+            <View
+                android:id="@+id/addmoney_background"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@id/savings_background"
+                app:layout_constraintEnd_toStartOf="@id/withdraw_background"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/addmoney_background"
+                />
+
+            <View
+                android:id="@+id/withdraw_background"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@id/savings_background"
+                app:layout_constraintStart_toEndOf="@id/addmoney_background"
+                app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/withdraw_background"
+                />
+
+            <TextView
+                android:id="@+id/TW_options_for_earning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/get_your_money_working_for_you"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-black"
+                app:layout_constraintTop_toBottomOf="@id/addmoney_background"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"/>
+
+            <View
+                android:id="@+id/save_container"
+                android:layout_width="378dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rounded_rectangle"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@id/TW_options_for_earning" />
+
+            <View
+                android:id="@+id/invest_container"
+                android:layout_width="378dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rounded_rectangle"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@id/save_container" />
+
+            <TextView
+                android:id="@+id/TW_ways_to_earn_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ways_to_earn_more_money"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-black"
+                app:layout_constraintTop_toBottomOf="@id/invest_container"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"/>
+
+            <View
+                android:id="@+id/invite_container"
+                android:layout_width="378dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rounded_rectangle"
+                app:layout_constraintStart_toStartOf="@id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@id/TW_ways_to_earn_money" />
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,8 +17,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.BTNLogin.setOnClickListener {
+
             if (binding.ETPassword.text.toString() == "admin"){
                 val intent = Intent(this,Dashboard::class.java)
+                intent.putExtra("misho",binding.ETPhoneNumber.text.toString())
                 startActivity(intent)
             }
             else{

@@ -12,4 +12,7 @@
     <string name="mobile_data_indicator">mobile data indicator</string>
     <string name="hyperlink">  click here <a href="https://www.geeksforgeeks.org/">geeksforgeeks.org</a> to go to site</string>
     <string name="hyperlink2"><a href="https://practice.geeksforgeeks.org/">practice.geeksforgeeks.org</a></string>
+    <string name="tip_text">Good morning, remember to save today</string>
+    <string name="get_your_money_working_for_you">Get your money working for you</string>
+    <string name="ways_to_earn_more_money">Ways to earn more money</string>
 </resources>

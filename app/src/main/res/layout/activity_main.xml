@@ -103,7 +103,7 @@
         android:layout_marginTop="90dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/sign_into_your_account"
-        android:textColor="@color/figma_blue_login"
+        android:textColor="@color/figma_blue"
         android:textSize="35sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -227,7 +227,7 @@
         android:layout_width="382dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:backgroundTint="@color/figma_blue_login"
+        android:backgroundTint="@color/figma_blue"
         android:text="@string/log_in_button"
         android:layout_marginTop="670dp"
         app:layout_constraintStart_toStartOf="parent"
