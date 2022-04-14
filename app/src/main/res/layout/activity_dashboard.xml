@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard">
+
+
+    <Space
+        android:id="@+id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="9dp"
+        android:layout_marginStart="25dp"
+        android:format12Hour="hh:mm a"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="15sp"
+        />
+
+    <View
+        android:id="@+id/statusbar_icons_view"
+        android:layout_width="200dp"
+        android:layout_height="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/IV_mobile_data"
+        android:layout_marginStart="130dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="9dp"
+        android:contentDescription="@string/mobile_data_indicator"
+        android:src="@drawable/ic_mobiledata"
+        app:layout_constraintEnd_toStartOf="@id/IV_wifi"
+        app:layout_constraintStart_toStartOf="@+id/statusbar_icons_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/IV_wifi"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_wifi"
+        app:layout_constraintEnd_toEndOf="@id/IV_battery"
+        app:layout_constraintStart_toEndOf="@id/IV_mobile_data"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="9dp"
+        android:contentDescription="@string/mobile_data_indicator"
+        />
+
+    <ImageView
+        android:id="@+id/IV_battery"
+        android:layout_marginEnd="11dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_battery"
+        app:layout_constraintEnd_toEndOf="@id/statusbar_icons_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/IV_wifi"
+        android:layout_marginTop="9dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:contentDescription="@string/mobile_data_indicator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

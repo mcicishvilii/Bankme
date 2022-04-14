@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Bankme</string>
+    <string name="sign_into_your_account">Sign into your Account</string>
+    <string name="log_into_your_bankme_account">Log into your BankMe account</string>
+    <string name="phone_number">Phone number</string>
+    <string name="password">Password</string>
+    <string name="log_in_button">LOG IN</string>
+    <string name="enter_your_phone_number">enter your phone number</string>
+    <string name="enter_password">enter password</string>
+    <string name="do_you_not_have_a_bankme_account_sign_up_here">Do you not have a BankMe account? Sign up here</string>
+    <string name="have_you_forgotten_your_password_click_here_to_recover_it">Have you forgotten your password?, click here to recover it</string>
+    <string name="mobile_data_indicator">mobile data indicator</string>
+    <string name="hyperlink">  click here <a href="https://www.geeksforgeeks.org/">geeksforgeeks.org</a> to go to site</string>
+    <string name="hyperlink2"><a href="https://practice.geeksforgeeks.org/">practice.geeksforgeeks.org</a></string>
+</resources>

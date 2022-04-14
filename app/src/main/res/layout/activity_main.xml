@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Space
+        android:id="@+id/statusbar"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_constraintDimensionRatio="10"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       />
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="9dp"
+        android:layout_marginStart="25dp"
+        android:format12Hour="hh:mm a"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="15sp"
+        />
+
+    <View
+        android:id="@+id/statusbar_icons_view"
+        android:layout_width="200dp"
+        android:layout_height="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/IV_mobile_data"
+        android:layout_marginStart="130dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="9dp"
+        android:contentDescription="@string/mobile_data_indicator"
+        android:src="@drawable/ic_mobiledata"
+        app:layout_constraintEnd_toStartOf="@id/IV_wifi"
+        app:layout_constraintStart_toStartOf="@+id/statusbar_icons_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/IV_wifi"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_wifi"
+        app:layout_constraintEnd_toEndOf="@id/IV_battery"
+        app:layout_constraintStart_toEndOf="@id/IV_mobile_data"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="9dp"
+        android:contentDescription="@string/mobile_data_indicator"
+       />
+
+    <ImageView
+        android:id="@+id/IV_battery"
+        android:layout_marginEnd="11dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_battery"
+        app:layout_constraintEnd_toEndOf="@id/statusbar_icons_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/IV_wifi"
+        android:layout_marginTop="9dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:contentDescription="@string/mobile_data_indicator" />
+
+
+
+
+
+
+
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/mindori_start"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintGuide_percent="0.060"-->
+<!--        android:orientation="vertical"/>-->
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/mindori_end"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintGuide_percent="0.940"-->
+<!--        android:orientation="vertical"/>-->
+
+    <TextView
+        android:id="@+id/TW_Sing_in_welcome"
+        android:layout_width="243dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="90dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/sign_into_your_account"
+        android:textColor="@color/figma_blue_login"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TW_another_signIn_text"
+        android:layout_width="293dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/log_into_your_bankme_account"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TW_Sing_in_welcome" />
+
+
+    <View
+        android:id="@+id/phone_num_group"
+        android:layout_width="382dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TW_another_signIn_text" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/phone_num_group"
+        app:layout_constraintStart_toStartOf="@id/phone_num_group"
+        android:text="@string/phone_number"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-black"
+        />
+
+    <View
+        android:id="@+id/phone_num_rectangle"
+        android:layout_width="382dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/phone_num_group"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+
+        />
+
+    <EditText
+        android:id="@+id/ET_phone_number"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:autofillHints=""
+        android:fontFamily="sans-serif-black"
+        android:hint="@string/enter_your_phone_number"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@id/phone_num_rectangle"
+        app:layout_constraintTop_toTopOf="@id/phone_num_rectangle"
+        tools:ignore="TextFields" />
+
+
+    <View
+        android:id="@+id/password_group"
+        android:layout_width="382dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_num_group" />
+
+    <TextView
+        android:id="@+id/TW_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/password_group"
+        app:layout_constraintStart_toStartOf="@id/password_group"
+        android:text="@string/password"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-black"
+        />
+    <View
+        android:id="@+id/password_rectangle"
+        android:layout_width="382dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/password_group"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+
+        />
+
+    <EditText
+        android:id="@+id/ET_password"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:autofillHints=""
+        android:hint="@string/enter_password"
+        android:minHeight="48dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintStart_toStartOf="@id/password_rectangle"
+        app:layout_constraintTop_toTopOf="@id/password_rectangle"
+        android:inputType="textPassword"
+        />
+
+
+    <TextView
+        android:id="@+id/TW_forgoten_pass"
+        android:layout_width="258dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/have_you_forgotten_your_password_click_here_to_recover_it"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_group" />
+
+
+    <Button
+        android:id="@+id/BTN_login"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/figma_blue_login"
+        android:text="@string/log_in_button"
+        android:layout_marginTop="670dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusbar" />
+
+    <TextView
+        android:layout_width="331dp"
+        android:layout_height="23dp"
+        app:layout_constraintTop_toBottomOf="@+id/BTN_login"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="@string/do_you_not_have_a_bankme_account_sign_up_here"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
