@@ -16,7 +16,6 @@ class Transaction_confirmed_activity : AppCompatActivity() {
         closeButton.setOnClickListener {
             val intent = Intent(this,Dashboard::class.java)
             startActivity(intent)
-
         }
 
 

@@ -115,7 +115,7 @@
 
 
     <TextView
-        android:id="@+id/TW_amount"
+        android:id="@+id/TW_amount_activity_Withrdaw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/phone_num_group"
