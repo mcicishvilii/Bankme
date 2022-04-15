@@ -15,4 +15,24 @@
     <string name="tip_text">Good morning, remember to save today</string>
     <string name="get_your_money_working_for_you">Get your money working for you</string>
     <string name="ways_to_earn_more_money">Ways to earn more money</string>
+    <string name="n50_000_10">N50,000.10</string>
+    <string name="total_savings">Total Savings</string>
+    <string name="add_money">Add Money</string>
+    <string name="withdraw_money">Withdraw money</string>
+    <string name="save_for_an_emergency">Save for an emergency</string>
+    <string name="invest_your_money">Invest your money</string>
+    <string name="invite_your_friends_and_get_a_bonus">Invite your friends and get a bonus</string>
+    <string name="savings_icon">Savings icon</string>
+    <string name="invest_icon">invest_icon</string>
+    <string name="amount">Amount</string>
+    <string name="dollar">$</string>
+    <string name="customer_name">Customer name</string>
+    <string name="enter_your_name">enter your name</string>
+    <string name="pin">PIN</string>
+    <string name="enter_your_pin">enter your pin</string>
+    <string name="withdraw">WITHDRAW</string>
+    <string name="close">Close</string>
+    <string name="transaction_complete_img">transaction_complete_img</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="your_order_for_n1_000_withdrawal_was_placed_successfully_a_text_message_will_be_sent_to_your_phone_containing_the_order_number_of_your_transaction_phone_number_and_address_of_the_nearest_agent_to_complete_your_transaction">Your order for N1,000 withdrawal was placed successfully! A text message will be sent to your phone containing the ORDER NUMBER of your transaction, phone number and address of the nearest agent to complete your transaction.</string>
 </resources>

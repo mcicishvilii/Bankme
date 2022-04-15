@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Withdraw_activity">
+
+
+
+    <Space
+        android:id="@+id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="9dp"
+        android:layout_marginStart="25dp"
+        android:format12Hour="hh:mm a"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="15sp"
+        />
+
+    <View
+        android:id="@+id/statusbar_icons_view"
+        android:layout_width="200dp"
+        android:layout_height="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/IV_mobile_data"
+        android:layout_marginStart="130dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="9dp"
+        android:contentDescription="@string/mobile_data_indicator"
+        android:src="@drawable/ic_mobiledata"
+        app:layout_constraintEnd_toStartOf="@id/IV_wifi"
+        app:layout_constraintStart_toStartOf="@+id/statusbar_icons_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/IV_wifi"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_wifi"
+        app:layout_constraintEnd_toEndOf="@id/IV_battery"
+        app:layout_constraintStart_toEndOf="@id/IV_mobile_data"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="9dp"
+        android:contentDescription="@string/mobile_data_indicator"
+        />
+
+    <ImageView
+        android:id="@+id/IV_battery"
+        android:layout_marginEnd="11dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_battery"
+        app:layout_constraintEnd_toEndOf="@id/statusbar_icons_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/IV_wifi"
+        android:layout_marginTop="9dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:contentDescription="@string/mobile_data_indicator" />
+
+
+    <View
+        android:id="@+id/phone_num_group"
+        android:layout_width="382dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TW_amount_in_int" />
+
+
+    <TextView
+        android:id="@+id/TW_amount_in_int"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="27sp"
+        app:layout_constraintTop_toTopOf="@id/statusbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="30dp"/>
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/statusbar"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        android:backgroundTint="@color/white"
+
+        />
+
+
+    <TextView
+        android:id="@+id/TW_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/phone_num_group"
+        app:layout_constraintStart_toStartOf="@id/phone_num_group"
+        android:text="@string/amount"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-black"
+        />
+
+    <View
+        android:id="@+id/ET_money_to_transfer_rectangle"
+        android:layout_width="382dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/phone_num_group"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+
+
+        />
+
+    <EditText
+        android:id="@+id/ET_money_to_transfer"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:autofillHints=""
+        android:fontFamily="sans-serif-black"
+        android:hint="@string/dollar"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@id/ET_money_to_transfer_rectangle"
+        app:layout_constraintTop_toTopOf="@id/ET_money_to_transfer_rectangle"
+        tools:ignore="TextFields" />
+
+
+    <View
+        android:id="@+id/password_group"
+        android:layout_width="382dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_num_group" />
+
+    <TextView
+        android:id="@+id/TW_Customer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/password_group"
+        app:layout_constraintStart_toStartOf="@id/password_group"
+        android:text="@string/customer_name"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-black"
+        />
+    <View
+        android:id="@+id/password_rectangle"
+        android:layout_width="382dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/password_group"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+
+        />
+
+    <EditText
+        android:id="@+id/ET_Customer_name"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:hint="@string/enter_your_name"
+        android:minHeight="48dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintStart_toStartOf="@id/password_rectangle"
+        app:layout_constraintTop_toTopOf="@id/password_rectangle"
+        android:inputType="textPersonName"
+        />
+
+
+
+    <View
+        android:id="@+id/pin_group"
+        android:layout_width="382dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_group" />
+
+    <TextView
+        android:id="@+id/TW_pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/pin_group"
+        app:layout_constraintStart_toStartOf="@id/pin_group"
+        android:text="@string/pin"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-black"
+        />
+    <View
+        android:id="@+id/pin_rectangle"
+        android:layout_width="382dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/pin_group"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+
+        />
+
+    <EditText
+        android:id="@+id/ET_pin"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:hint="@string/enter_your_pin"
+        android:minHeight="48dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintStart_toStartOf="@id/pin_rectangle"
+        app:layout_constraintTop_toTopOf="@id/pin_rectangle"
+        android:inputType="numberPassword"
+        />
+
+    <Button
+        android:id="@+id/BTN_withdraw_activity_withdraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintDimensionRatio="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:text="@string/withdraw"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

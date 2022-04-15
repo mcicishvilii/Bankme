@@ -4,7 +4,7 @@
 
     <solid android:color="@color/figma_grey_textInput_field" />
     <corners android:radius="7dp" />
-    <stroke android:width="3dp" android:color="@color/lighter_grey"/>
+    <stroke android:width="3dp" android:color="@color/grey"/>
 
 
 </shape>
